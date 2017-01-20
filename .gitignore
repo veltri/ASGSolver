@@ -23,5 +23,4 @@ gprof.*
 
 # class files
 /bin
-/bin/*
 *.class
