@@ -1,0 +1,47 @@
+PARSER_BEGIN(WeightFileParser)
+
+package input;
+
+public class WeightFileParser {
+
+  private static InputDirector director;
+
+  public void configureDirector( InputDirector d ) {
+
+    director = d;
+
+  }
+
+  public InputDirector getDirector() {
+
+    return director;
+
+  }
+
+}
+
+PARSER_END(WeightFileParser)
+
+SKIP : { " " | "\t" | "\n" | "\r" }
+
+TOKEN :
+{
+  <ID: ["a"-"z","A"-"Z","_"](["a"-"z","A"-"Z","_","0"-"9"])*>
+| <COMMA: ",">
+| <RIGHTARROW: "->">
+| <VALUE: ["0"-"9"](["0"-"9"])*>
+}
+
+void start() :
+{ Token t; }
+{
+  ( literals() <RIGHTARROW> t=<VALUE> 
+  { director.getBuilder().onWeightValue(t.image);
+    director.getBuilder().onWeight(); } )+
+}
+
+void literals() :
+{ Token t; }
+{
+  t=<ID> { director.getBuilder().onWeightKey(t.image); } [ <COMMA> literals() ]
+}

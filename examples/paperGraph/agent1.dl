@@ -1,0 +1,7 @@
+a_1.
+nb :- a.
+na :- b.
+a :- a_3, not na.
+na :- a_3, not a.
+b :- a_2, not nb.
+nb :- a_2, not b.
