@@ -4,9 +4,7 @@ import java.util.Enumeration;
 import java.util.HashMap;
 
 import util.ErrorMessage;
-import it.unical.mat.dlv.program.Atom;
 import it.unical.mat.dlv.program.Literal;
-import it.unical.mat.dlv.program.NormalAtom;
 import it.unical.mat.wrapper.Model;
 import it.unical.mat.wrapper.Predicate;
 

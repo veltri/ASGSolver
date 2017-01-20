@@ -1,8 +1,5 @@
 package data;
 
-import java.util.HashMap;
-
-import it.unical.mat.dlv.program.Literal;
 import it.unical.mat.wrapper.Model;
 
 public class NonAdditiveWeightTable extends WeightTable {
