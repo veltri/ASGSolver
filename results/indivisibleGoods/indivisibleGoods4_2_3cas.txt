@@ -1,0 +1,45 @@
+ERROR: ld.so: object 'libgtk3-nocsd.so.0' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+[runlim] version:		1.7
+[runlim] time limit:		1800 seconds
+[runlim] real time limit:	311040000 seconds
+[runlim] space limit:		12288 MB
+[runlim] argv[0]:		java
+[runlim] argv[1]:		-Xmx8192m
+[runlim] argv[2]:		-DentityExpansionLimit=1000000
+[runlim] argv[3]:		-cp
+[runlim] argv[4]:		bin:./lib/DLVwrapper-v4.2.jar
+[runlim] argv[5]:		algorithm.NTUFacade
+[runlim] argv[6]:		-reasoning=3core
+[runlim] argv[7]:		-stats
+[runlim] argv[8]:		-meta=/home/cesco/Workspace/GraphGenerator/outputIndivisibleGoods4_2/meta.xml
+[runlim] argv[9]:		/home/cesco/Workspace/GraphGenerator/outputIndivisibleGoods4_2/
+[runlim] start:			Sun Feb 17 21:55:03 2019
+[runlim] main pid:		10083
+Imputation answer sets:
+{ distrib(0) distrib(1) get(a2, 0) get(a3, 0) get(a1, 0) get(a0, 1) active(a1, g1) active(a0, g0) producer(a2) producer(a3) producer(a1) producer(a0) distributed(0) distributed(1) assembled(1) lowerThan(0, 1) good(g0) good(g1) produced(g0, 1) produced(g1, 1) }
+{ distrib(0) distrib(1) get(a2, 0) get(a3, 0) get(a1, 1) get(a0, 0) active(a1, g1) active(a0, g0) producer(a2) producer(a3) producer(a1) producer(a0) distributed(0) distributed(1) assembled(1) lowerThan(0, 1) good(g0) good(g1) produced(g0, 1) produced(g1, 1) }
+{ distrib(0) distrib(1) get(a2, 0) get(a3, 1) get(a1, 0) get(a0, 0) active(a1, g1) active(a0, g0) producer(a2) producer(a3) producer(a1) producer(a0) distributed(0) distributed(1) assembled(1) lowerThan(0, 1) good(g0) good(g1) produced(g0, 1) produced(g1, 1) }
+{ distrib(0) distrib(1) get(a2, 1) get(a3, 0) get(a1, 0) get(a0, 0) active(a1, g1) active(a0, g0) producer(a2) producer(a3) producer(a1) producer(a0) distributed(0) distributed(1) assembled(1) lowerThan(0, 1) good(g0) good(g1) produced(g0, 1) produced(g1, 1) }
+{ distrib(0) get(a2, 0) get(a3, 0) get(a1, 0) get(a0, 0) active(a1, g1) active(a0, g0) producer(a2) producer(a3) producer(a1) producer(a0) distributed(0) assembled(1) good(g0) good(g1) produced(g0, 1) produced(g1, 1) }
+
+Statistics:
+	IAS in 212 msec
+
+Core answer sets:
+{ distrib(0) distrib(1) get(a2, 0) get(a3, 0) get(a1, 0) get(a0, 1) active(a1, g1) active(a0, g0) producer(a2) producer(a3) producer(a1) producer(a0) distributed(0) distributed(1) assembled(1) lowerThan(0, 1) good(g0) good(g1) produced(g0, 1) produced(g1, 1) }
+{ distrib(0) distrib(1) get(a2, 0) get(a3, 0) get(a1, 1) get(a0, 0) active(a1, g1) active(a0, g0) producer(a2) producer(a3) producer(a1) producer(a0) distributed(0) distributed(1) assembled(1) lowerThan(0, 1) good(g0) good(g1) produced(g0, 1) produced(g1, 1) }
+{ distrib(0) distrib(1) get(a2, 0) get(a3, 1) get(a1, 0) get(a0, 0) active(a1, g1) active(a0, g0) producer(a2) producer(a3) producer(a1) producer(a0) distributed(0) distributed(1) assembled(1) lowerThan(0, 1) good(g0) good(g1) produced(g0, 1) produced(g1, 1) }
+{ distrib(0) distrib(1) get(a2, 1) get(a3, 0) get(a1, 0) get(a0, 0) active(a1, g1) active(a0, g0) producer(a2) producer(a3) producer(a1) producer(a0) distributed(0) distributed(1) assembled(1) lowerThan(0, 1) good(g0) good(g1) produced(g0, 1) produced(g1, 1) }
+{ distrib(0) get(a2, 0) get(a3, 0) get(a1, 0) get(a0, 0) active(a1, g1) active(a0, g0) producer(a2) producer(a3) producer(a1) producer(a0) distributed(0) assembled(1) good(g0) good(g1) produced(g0, 1) produced(g1, 1) }
+
+Statistics:
+	IAS in 212 msec
+	CAS in 320 msec
+[runlim] end:			Sun Feb 17 21:55:03 2019
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] real:			0.77 seconds
+[runlim] time:			0.36 seconds
+[runlim] space:			43.0 MB
+[runlim] samples:		4

@@ -7,17 +7,25 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Vector;
 
+import org.xml.sax.helpers.DefaultHandler;
+
 import data.Agent;
 import data.AgentCollection;
+import data.HedonicCoalitionNetworksWorthComputer;
+import data.IndivisibleGoodsWorthComputer;
+import data.MarketExchangeWorthComputer;
 import data.ModelsCollection;
+//import data.SkillsWorthComputer;
+import data.WorthComputer;
 import util.Constants;
 import util.ErrorMessage;
-import input.AdditiveWeightTableFactory;
+import input.HedonicCoalitionNetworksWorthComputerBuilder;
+import input.IndivisibleGoodsWorthComputerBuilder;
 import input.InputBuilder;
 import input.InputDirector;
+import input.MarketExchangeWorthComputerBuilder;
 import input.NTUInputBuilder;
-import input.NonAdditiveWeightTableFactory;
-import input.WeightTableFactory;
+//import input.SkillsWorthComputerBuilder;
 import it.unical.mat.dlv.program.Literal;
 import it.unical.mat.wrapper.Model;
 import it.unical.mat.wrapper.Predicate;
@@ -28,11 +36,12 @@ public class NTUFacade {
 	
 	private InputDirector inputDirector;
 	private InputBuilder inputBuilder;
-	private WeightTableFactory tableFactory;
+	private DefaultHandler worthComputerBuilder;
 	private String inputDirectory;
+	private String metaFilename;
 	private SolvingStrategy solvingStrategy;
 	private List< Model > imputations;
-	private Vector< HashMap< Integer, Integer > > imputationGainMatrix;
+	private Vector< HashMap< String, Double > > imputationGainMatrix;
 	private Task task;
 	private List< Model > core;
 	private long startTime;
@@ -40,16 +49,18 @@ public class NTUFacade {
 	private long endCoreTime;
 	private int kCore;
 	private boolean stats;
+	private WorthComputer worthComputer;
 	
 	
 	public NTUFacade() {
 		inputDirector = new InputDirector();
 		inputBuilder = null;
-		tableFactory = null;
+		worthComputerBuilder = null;
 		inputDirectory = "";
+		metaFilename = "";
 		solvingStrategy = null;
 		imputations = new ArrayList< Model >();
-		imputationGainMatrix = new Vector< HashMap < Integer, Integer > >();
+		imputationGainMatrix = new Vector< HashMap < String, Double > >();
 		task = Task.Imputations;
 		core = new ArrayList< Model >();
 		startTime = 0;
@@ -57,26 +68,19 @@ public class NTUFacade {
 		endCoreTime = 0;
 		kCore = 0;
 		stats = false;
+		worthComputer = null;
 	}
 	
 	public void readInput( String[] args ) {
 		
-		if( args.length > 3 )
-			ErrorMessage.errorGeneric("Too many arguments: "+Constants.getSystemName()+" [-nonAdditive] [-reasoning=imputations|-core|-2core|-3core|-4core] inputDirectory");
+		if( args.length > 4 || args.length < 2 )
+			ErrorMessage.errorGeneric("Wrong number of arguments: "+Constants.getSystemName()+" [-reasoning=imputations|-core|-2core|-3core|-4core] [-stats] -meta=metaFilename inputDirectory");
 		
 		for( String opt : args )
 		{
 			if( opt.startsWith("-") )
 			{					
-				if( opt.equals("-nonAdditive") )
-				{
-					if( tableFactory != null )
-						ErrorMessage.errorGeneric("Option -nonAdditive has been already seen");
-					tableFactory = new NonAdditiveWeightTableFactory();
-					// FIXME
-					ErrorMessage.errorGeneric("Support to non-additive functions is an ongoing work.");
-				}
-				else if( opt.equals("-reasoning=imputations") )
+				if( opt.equals("-reasoning=imputations") )
 				{
 					task = Task.Imputations;
 				}
@@ -103,6 +107,10 @@ public class NTUFacade {
 				{
 					stats = true;
 				}
+				else if( opt.startsWith("-meta=") )
+				{
+					metaFilename = opt.substring(opt.lastIndexOf('=')+1,opt.length());
+				}
 				else
 					ErrorMessage.errorGeneric("Option \"" + opt + "\" not recognized");
 			}
@@ -116,18 +124,25 @@ public class NTUFacade {
 		
 		solvingStrategy = new DLVStrategy();
 		
-		if( tableFactory == null )
-			tableFactory = new AdditiveWeightTableFactory();
-		
 		inputBuilder = new NTUInputBuilder();
-		inputBuilder.configureWeightBuilder(tableFactory);
 		inputDirector.configureBuilder(inputBuilder);
-		inputDirector.parseInput(inputDirectory);
+		//worthComputerBuilder = new SkillsWorthComputerBuilder();
+		//worthComputerBuilder = new IndivisibleGoodsWorthComputerBuilder();
+		//worthComputerBuilder = new HedonicCoalitionNetworksWorthComputerBuilder();
+		worthComputerBuilder = new MarketExchangeWorthComputerBuilder();
+		inputDirector.configureWorthBuilder(worthComputerBuilder);
+		inputDirector.parseInput(inputDirectory,metaFilename);
+		//worthComputer = SkillsWorthComputer.getInstance();
+		//worthComputer = IndivisibleGoodsWorthComputer.getInstance();
+		//worthComputer = HedonicCoalitionNetworksWorthComputer.getInstance();
+		worthComputer = MarketExchangeWorthComputer.getInstance();
 	}
 	
 	public void start(){
 		
 		startImputations();
+		if( stats )
+			printStats();
 		if( task == Task.Core )
 			startCore();
 		if( stats )
@@ -149,11 +164,11 @@ public class NTUFacade {
 			localInputFiles.add(agent.getProgramFile());
 			inputFiles.add(agent.getProgramFile());
 			ModelsCollection models = solvingStrategy.solve(localInputFiles);
-			int maxWeight = Integer.MIN_VALUE;
+			double maxWeight = -Double.MIN_VALUE;
 			while( models.hasMoreModels() )
 			{
 				Model model = models.nextModel();
-				int modelWeight = agent.getWeightTable().getWeight(model);
+				double modelWeight = worthComputer.getWorth(model,agent);
 				if( modelWeight > maxWeight )
 					maxWeight = modelWeight;
 			}
@@ -170,18 +185,18 @@ public class NTUFacade {
 		List< Model > modelList = new ArrayList< Model >();
 		// Compute the maximum gain which an agent may achieve into the grand-coalition, 
 		// and store all the gains into a matrix.
-		Vector< HashMap< Integer, Integer > > gainMatrix = new Vector< HashMap < Integer, Integer > >();
+		Vector< HashMap< String, Double > > gainMatrix = new Vector< HashMap < String, Double > >();
 //		int modelCounter = 0;
 		while( models.hasMoreModels() )
 		{
 //			modelCounter++;
 			Model model = models.nextModel();
-			HashMap< Integer, Integer > agentGains = new HashMap< Integer, Integer >();
+			HashMap< String, Double > agentGains = new HashMap< String, Double >();
 			boolean secondProperty = true;
 			for( int i=0; i<agents.size() && secondProperty; i++ )
 			{
 				Agent agent = agents.getAgent(i);
-				int modelWeight = agent.getWeightTable().getWeight(model);
+				double modelWeight = worthComputer.getWorth(model,agent);
 				agentGains.put(agent.getId(), modelWeight);
 				if( modelWeight > agent.getMaxWeightGrandCoalition() )
 					agent.setMaxWeightGrandCoalition(modelWeight);
@@ -241,7 +256,7 @@ public class NTUFacade {
 					if( task == Task.Imputations )
 						stop = true;
 				}
-//				printModel(model);
+				printModel(model);
 			}
 		}
 	}
@@ -289,12 +304,12 @@ public class NTUFacade {
 					while( coalitionModels.hasMoreModels() )
 					{
 						Model coalitionModel = coalitionModels.nextModel();
-						HashMap< Integer, Integer > coalitionModelGains = new HashMap< Integer, Integer >();
+						HashMap< String, Double > coalitionModelGains = new HashMap< String, Double >();
 						
 						for( int j=0; j<coalition.size(); j++ )
 						{
 							Agent coalitionAgent = coalition.getAgent(j);
-							int coalitionModelWeight = coalitionAgent.getWeightTable().getWeight(coalitionModel);
+							double coalitionModelWeight = worthComputer.getWorth(coalitionModel,coalitionAgent);
 							coalitionModelGains.put(coalitionAgent.getId(), coalitionModelWeight);
 						}
 						
@@ -323,7 +338,7 @@ public class NTUFacade {
 			if( !nonCoreAnswerSetIndices.contains(j) )
 			{
 				core.add(imputations.get(j));
-//				printModel(imputations.get(j));
+				printModel(imputations.get(j));
 			}
 	}
 

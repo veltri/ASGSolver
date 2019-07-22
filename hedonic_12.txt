@@ -1,0 +1,52 @@
+ERROR: ld.so: object 'libgtk3-nocsd.so.0' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+[runlim] version:		1.7
+[runlim] time limit:		1800 seconds
+[runlim] real time limit:	311040000 seconds
+[runlim] space limit:		8192 MB
+[runlim] argv[0]:		java
+[runlim] argv[1]:		-Xmx8192m
+[runlim] argv[2]:		-DentityExpansionLimit=1000000
+[runlim] argv[3]:		-cp
+[runlim] argv[4]:		bin:./lib/DLVwrapper-v4.2.jar
+[runlim] argv[5]:		algorithm.NTUFacade
+[runlim] argv[6]:		-reasoning=core
+[runlim] argv[7]:		-stats
+[runlim] argv[8]:		-meta=/home/cesco/Workspace/GraphGenerator/outputHedonic_12/meta.xml
+[runlim] argv[9]:		/home/cesco/Workspace/GraphGenerator/outputHedonic_12/
+[runlim] start:			Mon Dec 17 13:10:45 2018
+[runlim] main pid:		15801
+Imputation answer sets:
+[runlim] sample:		13.6 seconds, 596.1 MB
+[runlim] sample:		46.1 seconds, 1211.0 MB
+[runlim] sample:		75.8 seconds, 1887.5 MB
+[runlim] sample:		110.8 seconds, 2628.1 MB
+[runlim] sample:		133.9 seconds, 2738.7 MB
+[runlim] sample:		173.6 seconds, 3306.3 MB
+[runlim] sample:		202.2 seconds, 3667.8 MB
+[runlim] sample:		241.4 seconds, 3687.8 MB
+[runlim] sample:		281.4 seconds, 4347.9 MB
+[runlim] sample:		313.5 seconds, 4371.7 MB
+[runlim] sample:		347.5 seconds, 4921.9 MB
+[runlim] sample:		391.0 seconds, 4942.4 MB
+[runlim] sample:		419.8 seconds, 5153.7 MB
+[runlim] sample:		458.5 seconds, 6022.9 MB
+[runlim] sample:		496.9 seconds, 6059.8 MB
+[runlim] sample:		525.1 seconds, 6059.8 MB
+[runlim] sample:		574.3 seconds, 6443.0 MB
+[runlim] sample:		619.0 seconds, 6458.1 MB
+[runlim] sample:		648.8 seconds, 6454.2 MB
+[runlim] sample:		693.9 seconds, 6901.5 MB
+[runlim] sample:		749.6 seconds, 6918.9 MB
+[runlim] sample:		773.6 seconds, 6918.9 MB
+[runlim] sample:		815.4 seconds, 7350.0 MB
+[runlim] sample:		892.4 seconds, 7355.0 MB
+[runlim] sample:		912.7 seconds, 7326.8 MB
+[runlim] sample:		936.9 seconds, 7326.8 MB
+[runlim] end:			Mon Dec 17 13:15:14 2018
+[runlim] status:		out of memory
+[runlim] result:		1
+[runlim] children:		2689
+[runlim] real:			269.88 seconds
+[runlim] time:			965.70 seconds
+[runlim] space:			8216.6 MB
+[runlim] samples:		2690

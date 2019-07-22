@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+java -Xmx8192m -DentityExpansionLimit=1000000 -cp bin:./lib/DLVwrapper-v4.2.jar algorithm.NTUFacade -reasoning=core -stats -meta=/home/cesco/Workspace/GraphGenerator/outputSkill15_9/meta.xml /home/cesco/Workspace/GraphGenerator/outputSkill15_9/ >& 15_9.txt
+
+java -Xmx8192m -DentityExpansionLimit=1000000 -cp bin:./lib/DLVwrapper-v4.2.jar algorithm.NTUFacade -reasoning=core -stats -meta=/home/cesco/Workspace/GraphGenerator/outputSkill15_9/meta.xml /home/cesco/Workspace/GraphGenerator/outputSkill15_12/ >& 15_12.txt
+
+java -Xmx8192m -DentityExpansionLimit=1000000 -cp bin:./lib/DLVwrapper-v4.2.jar algorithm.NTUFacade -reasoning=core -stats -meta=/home/cesco/Workspace/GraphGenerator/outputSkill15_9/meta.xml /home/cesco/Workspace/GraphGenerator/outputSkill15_15/ >& 15_15.txt

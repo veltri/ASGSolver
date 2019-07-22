@@ -1,0 +1,49 @@
+ERROR: ld.so: object 'libgtk3-nocsd.so.0' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+[runlim] version:		1.7
+[runlim] time limit:		1800 seconds
+[runlim] real time limit:	311040000 seconds
+[runlim] space limit:		12288 MB
+[runlim] argv[0]:		java
+[runlim] argv[1]:		-Xmx8192m
+[runlim] argv[2]:		-DentityExpansionLimit=1000000
+[runlim] argv[3]:		-cp
+[runlim] argv[4]:		bin:./lib/DLVwrapper-v4.2.jar
+[runlim] argv[5]:		algorithm.NTUFacade
+[runlim] argv[6]:		-reasoning=3core
+[runlim] argv[7]:		-stats
+[runlim] argv[8]:		-meta=/home/cesco/Workspace/GraphGenerator/outputMarketExchange10_2/meta.xml
+[runlim] argv[9]:		/home/cesco/Workspace/GraphGenerator/outputMarketExchange10_2/
+[runlim] start:			Fri Jan 18 20:00:53 2019
+[runlim] main pid:		5443
+Imputation answer sets:
+[runlim] sample:		60.6 seconds, 2554.1 MB
+[runlim] sample:		128.9 seconds, 3997.9 MB
+[runlim] sample:		195.0 seconds, 5528.7 MB
+[runlim] sample:		272.5 seconds, 5625.0 MB
+[runlim] sample:		339.3 seconds, 6740.7 MB
+[runlim] sample:		410.8 seconds, 7057.6 MB
+[runlim] sample:		481.9 seconds, 7789.5 MB
+[runlim] sample:		557.2 seconds, 7836.2 MB
+[runlim] sample:		634.5 seconds, 7836.2 MB
+[runlim] sample:		713.4 seconds, 7838.2 MB
+[runlim] sample:		792.5 seconds, 7838.2 MB
+[runlim] sample:		871.0 seconds, 7838.2 MB
+[runlim] sample:		948.3 seconds, 7838.2 MB
+[runlim] sample:		1025.6 seconds, 7838.2 MB
+[runlim] sample:		1103.0 seconds, 7838.2 MB
+[runlim] sample:		1180.8 seconds, 7838.2 MB
+[runlim] sample:		1259.9 seconds, 7838.2 MB
+[runlim] sample:		1338.9 seconds, 7838.5 MB
+[runlim] sample:		1416.6 seconds, 7838.5 MB
+[runlim] sample:		1495.1 seconds, 7838.5 MB
+[runlim] sample:		1574.2 seconds, 7838.5 MB
+[runlim] sample:		1653.3 seconds, 7838.5 MB
+[runlim] sample:		1732.4 seconds, 7838.5 MB
+[runlim] end:			Fri Jan 18 20:04:52 2019
+[runlim] status:		out of time
+[runlim] result:		1
+[runlim] children:		2387
+[runlim] real:			239.30 seconds
+[runlim] time:			1800.65 seconds
+[runlim] space:			7838.5 MB
+[runlim] samples:		2388

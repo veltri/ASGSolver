@@ -1,0 +1,50 @@
+ERROR: ld.so: object 'libgtk3-nocsd.so.0' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+[runlim] version:		1.7
+[runlim] time limit:		1800 seconds
+[runlim] real time limit:	311040000 seconds
+[runlim] space limit:		12288 MB
+[runlim] argv[0]:		java
+[runlim] argv[1]:		-Xmx8192m
+[runlim] argv[2]:		-DentityExpansionLimit=1000000
+[runlim] argv[3]:		-cp
+[runlim] argv[4]:		bin:./lib/DLVwrapper-v4.2.jar
+[runlim] argv[5]:		algorithm.NTUFacade
+[runlim] argv[6]:		-reasoning=4core
+[runlim] argv[7]:		-stats
+[runlim] argv[8]:		-meta=/home/cesco/Workspace/GraphGenerator/outputMarketExchange12_2/meta.xml
+[runlim] argv[9]:		/home/cesco/Workspace/GraphGenerator/outputMarketExchange12_2/
+[runlim] start:			Fri Jan 18 20:20:45 2019
+[runlim] main pid:		5823
+Imputation answer sets:
+[runlim] sample:		61.3 seconds, 2261.9 MB
+[runlim] sample:		127.6 seconds, 3349.7 MB
+[runlim] sample:		193.4 seconds, 4672.7 MB
+[runlim] sample:		260.9 seconds, 6036.4 MB
+[runlim] sample:		331.6 seconds, 7034.1 MB
+[runlim] sample:		397.3 seconds, 7817.2 MB
+[runlim] sample:		473.3 seconds, 7922.0 MB
+[runlim] sample:		550.4 seconds, 7924.9 MB
+[runlim] sample:		627.9 seconds, 7924.9 MB
+[runlim] sample:		706.6 seconds, 7924.9 MB
+[runlim] sample:		783.9 seconds, 7924.9 MB
+[runlim] sample:		862.2 seconds, 7924.9 MB
+[runlim] sample:		939.2 seconds, 7924.9 MB
+[runlim] sample:		1017.5 seconds, 7924.9 MB
+[runlim] sample:		1094.4 seconds, 7924.9 MB
+[runlim] sample:		1171.5 seconds, 7924.9 MB
+[runlim] sample:		1248.3 seconds, 7924.9 MB
+[runlim] sample:		1325.7 seconds, 7924.9 MB
+[runlim] sample:		1403.7 seconds, 7924.9 MB
+[runlim] sample:		1482.7 seconds, 7924.9 MB
+[runlim] sample:		1561.4 seconds, 7924.9 MB
+[runlim] sample:		1638.3 seconds, 7924.9 MB
+[runlim] sample:		1716.5 seconds, 7924.9 MB
+[runlim] sample:		1793.8 seconds, 7924.9 MB
+[runlim] end:			Fri Jan 18 20:24:46 2019
+[runlim] status:		out of time
+[runlim] result:		1
+[runlim] children:		2410
+[runlim] real:			241.85 seconds
+[runlim] time:			1800.88 seconds
+[runlim] space:			7924.9 MB
+[runlim] samples:		2411

@@ -1,0 +1,37 @@
+ERROR: ld.so: object 'libgtk3-nocsd.so.0' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+[runlim] version:		1.7
+[runlim] time limit:		1800 seconds
+[runlim] real time limit:	311040000 seconds
+[runlim] space limit:		12288 MB
+[runlim] argv[0]:		java
+[runlim] argv[1]:		-Xmx8192m
+[runlim] argv[2]:		-DentityExpansionLimit=1000000
+[runlim] argv[3]:		-cp
+[runlim] argv[4]:		bin:./lib/DLVwrapper-v4.2.jar
+[runlim] argv[5]:		algorithm.NTUFacade
+[runlim] argv[6]:		-reasoning=3core
+[runlim] argv[7]:		-stats
+[runlim] argv[8]:		-meta=/home/cesco/Workspace/GraphGenerator/outputHedonic_2/meta.xml
+[runlim] argv[9]:		/home/cesco/Workspace/GraphGenerator/outputHedonic_2/
+[runlim] start:			Wed Dec 19 00:48:33 2018
+[runlim] main pid:		4065
+Imputation answer sets:
+{ agent(0) agent(1) not_coal(1, 0) not_coal(0, 1) coal(0, 0) coal(1, 1) all_in val_a1 }
+
+Statistics:
+	IAS in 78 msec
+
+Core answer sets:
+{ agent(0) agent(1) not_coal(1, 0) not_coal(0, 1) coal(0, 0) coal(1, 1) all_in val_a1 }
+
+Statistics:
+	IAS in 78 msec
+	CAS in 85 msec
+[runlim] end:			Wed Dec 19 00:48:33 2018
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		0
+[runlim] real:			0.98 seconds
+[runlim] time:			0.13 seconds
+[runlim] space:			32.2 MB
+[runlim] samples:		1

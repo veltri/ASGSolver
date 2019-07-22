@@ -1,0 +1,39 @@
+ERROR: ld.so: object 'libgtk3-nocsd.so.0' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+[runlim] version:		1.7
+[runlim] time limit:		1800 seconds
+[runlim] real time limit:	311040000 seconds
+[runlim] space limit:		12288 MB
+[runlim] argv[0]:		java
+[runlim] argv[1]:		-Xmx8192m
+[runlim] argv[2]:		-DentityExpansionLimit=1000000
+[runlim] argv[3]:		-cp
+[runlim] argv[4]:		bin:./lib/DLVwrapper-v4.2.jar
+[runlim] argv[5]:		algorithm.NTUFacade
+[runlim] argv[6]:		-reasoning=2core
+[runlim] argv[7]:		-stats
+[runlim] argv[8]:		-meta=/home/cesco/Workspace/GraphGenerator/outputHedonic_3/meta.xml
+[runlim] argv[9]:		/home/cesco/Workspace/GraphGenerator/outputHedonic_3/
+[runlim] start:			Tue Dec 18 12:19:06 2018
+[runlim] main pid:		9743
+Imputation answer sets:
+{ agent(0) agent(1) agent(2) not_coal(1, 0) not_coal(2, 0) not_coal(0, 1) not_coal(2, 1) not_coal(0, 2) not_coal(1, 2) coal(0, 0) coal(1, 1) coal(2, 2) all_in val_a2 }
+{ agent(0) agent(1) agent(2) not_coal(2, 0) not_coal(2, 1) not_coal(0, 2) not_coal(1, 2) coal(0, 0) coal(1, 1) coal(2, 2) coal(1, 0) coal(0, 1) all_in val_a2 }
+
+Statistics:
+	IAS in 184 msec
+
+Core answer sets:
+{ agent(0) agent(1) agent(2) not_coal(1, 0) not_coal(2, 0) not_coal(0, 1) not_coal(2, 1) not_coal(0, 2) not_coal(1, 2) coal(0, 0) coal(1, 1) coal(2, 2) all_in val_a2 }
+{ agent(0) agent(1) agent(2) not_coal(2, 0) not_coal(2, 1) not_coal(0, 2) not_coal(1, 2) coal(0, 0) coal(1, 1) coal(2, 2) coal(1, 0) coal(0, 1) all_in val_a2 }
+
+Statistics:
+	IAS in 184 msec
+	CAS in 201 msec
+[runlim] end:			Tue Dec 18 12:19:06 2018
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		0
+[runlim] real:			0.83 seconds
+[runlim] time:			0.26 seconds
+[runlim] space:			35.6 MB
+[runlim] samples:		3

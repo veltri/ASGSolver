@@ -1,0 +1,41 @@
+ERROR: ld.so: object 'libgtk3-nocsd.so.0' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+[runlim] version:		1.7
+[runlim] time limit:		1800 seconds
+[runlim] real time limit:	311040000 seconds
+[runlim] space limit:		12288 MB
+[runlim] argv[0]:		java
+[runlim] argv[1]:		-Xmx8192m
+[runlim] argv[2]:		-DentityExpansionLimit=1000000
+[runlim] argv[3]:		-cp
+[runlim] argv[4]:		bin:./lib/DLVwrapper-v4.2.jar
+[runlim] argv[5]:		algorithm.NTUFacade
+[runlim] argv[6]:		-reasoning=2core
+[runlim] argv[7]:		-stats
+[runlim] argv[8]:		-meta=/home/cesco/Workspace/GraphGenerator/outputIndivisibleGoods8_8/meta.xml
+[runlim] argv[9]:		/home/cesco/Workspace/GraphGenerator/outputIndivisibleGoods8_8/
+[runlim] start:			Mon Feb 18 00:03:17 2019
+[runlim] main pid:		14016
+Imputation answer sets:
+[runlim] sample:		10.0 seconds, 401.6 MB
+[runlim] sample:		20.0 seconds, 580.3 MB
+[runlim] sample:		30.0 seconds, 799.1 MB
+[runlim] sample:		40.0 seconds, 830.1 MB
+[runlim] sample:		49.6 seconds, 1550.0 MB
+[runlim] sample:		59.6 seconds, 1580.9 MB
+[runlim] sample:		69.7 seconds, 1607.2 MB
+[runlim] sample:		79.7 seconds, 1635.8 MB
+[runlim] sample:		88.8 seconds, 1663.7 MB
+[runlim] sample:		98.7 seconds, 1712.8 MB
+[runlim] sample:		99.3 seconds, 1723.4 MB
+DLV Error, exitValue=134
+
+Generic error: The grand-coalition program has no answer sets
+[runlim] sample:		0.3 seconds, 26.5 MB
+[runlim] end:			Mon Feb 18 00:05:20 2019
+[runlim] status:		ok
+[runlim] result:		110
+[runlim] children:		1163
+[runlim] real:			123.47 seconds
+[runlim] time:			99.35 seconds
+[runlim] space:			1724.2 MB
+[runlim] samples:		1204

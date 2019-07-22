@@ -1,0 +1,41 @@
+ERROR: ld.so: object 'libgtk3-nocsd.so.0' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+[runlim] version:		1.7
+[runlim] time limit:		1800 seconds
+[runlim] real time limit:	311040000 seconds
+[runlim] space limit:		12288 MB
+[runlim] argv[0]:		java
+[runlim] argv[1]:		-Xmx8192m
+[runlim] argv[2]:		-DentityExpansionLimit=1000000
+[runlim] argv[3]:		-cp
+[runlim] argv[4]:		bin:./lib/DLVwrapper-v4.2.jar
+[runlim] argv[5]:		algorithm.NTUFacade
+[runlim] argv[6]:		-reasoning=3core
+[runlim] argv[7]:		-stats
+[runlim] argv[8]:		-meta=/home/cesco/Workspace/GraphGenerator/outputIndivisibleGoods2_2/meta.xml
+[runlim] argv[9]:		/home/cesco/Workspace/GraphGenerator/outputIndivisibleGoods2_2/
+[runlim] start:			Sun Feb 17 21:55:02 2019
+[runlim] main pid:		9955
+Imputation answer sets:
+{ distrib(0) distrib(1) get(a1, 0) get(a0, 1) active(a1, g0) active(a1, g1) active(a0, g0) producer(a1) producer(a0) distributed(0) distributed(1) assembled(1) lowerThan(0, 1) good(g0) good(g1) produced(g0, 2) produced(g1, 1) }
+{ distrib(0) distrib(1) get(a1, 1) get(a0, 0) active(a1, g0) active(a1, g1) active(a0, g0) producer(a1) producer(a0) distributed(0) distributed(1) assembled(1) lowerThan(0, 1) good(g0) good(g1) produced(g0, 2) produced(g1, 1) }
+{ distrib(0) get(a1, 0) get(a0, 0) active(a1, g0) active(a1, g1) active(a0, g0) producer(a1) producer(a0) distributed(0) assembled(1) good(g0) good(g1) produced(g0, 2) produced(g1, 1) }
+
+Statistics:
+	IAS in 80 msec
+
+Core answer sets:
+{ distrib(0) distrib(1) get(a1, 0) get(a0, 1) active(a1, g0) active(a1, g1) active(a0, g0) producer(a1) producer(a0) distributed(0) distributed(1) assembled(1) lowerThan(0, 1) good(g0) good(g1) produced(g0, 2) produced(g1, 1) }
+{ distrib(0) distrib(1) get(a1, 1) get(a0, 0) active(a1, g0) active(a1, g1) active(a0, g0) producer(a1) producer(a0) distributed(0) distributed(1) assembled(1) lowerThan(0, 1) good(g0) good(g1) produced(g0, 2) produced(g1, 1) }
+{ distrib(0) get(a1, 0) get(a0, 0) active(a1, g0) active(a1, g1) active(a0, g0) producer(a1) producer(a0) distributed(0) assembled(1) good(g0) good(g1) produced(g0, 2) produced(g1, 1) }
+
+Statistics:
+	IAS in 80 msec
+	CAS in 93 msec
+[runlim] end:			Sun Feb 17 21:55:02 2019
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		0
+[runlim] real:			0.57 seconds
+[runlim] time:			0.13 seconds
+[runlim] space:			31.1 MB
+[runlim] samples:		1

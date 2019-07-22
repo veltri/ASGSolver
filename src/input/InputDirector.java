@@ -3,6 +3,12 @@ package input;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+
+//SAX
+import javax.xml.parsers.*;
+import org.xml.sax.*;
+import org.xml.sax.helpers.DefaultHandler;
 
 import util.ErrorMessage;
 
@@ -10,10 +16,10 @@ public class InputDirector {
 	
 	public InputDirector() {
 		builder = null;
-		weightFileParser = null;
+		worthComputerBuilder = null;
 	}
 	
-	public void parseInput( String inputDirectory ) {
+	public void parseInput( String inputDirectory, String metadataFileName ) {
 		assert builder != null : "Set a valid input builder";
 		File dir = new File(inputDirectory);
 		if( !dir.exists() || !dir.isDirectory() )
@@ -21,44 +27,46 @@ public class InputDirector {
 		for( File file: dir.listFiles() )
 		{
 			String fileName = file.getName();
-			if( fileName.startsWith("agent") && fileName.endsWith(".dl") )
+			if( fileName.endsWith(".dl") )
 			{
-				int agentId = 0;
-				try{
-					
-					agentId = Integer.parseInt(fileName.substring(fileName.indexOf('t')+1, fileName.lastIndexOf(".dl")));
-					
-				} catch( NumberFormatException e ) { e.printStackTrace(); }
+				String agentId = fileName.substring(0, fileName.indexOf(".dl"));
 				builder.onAgentId(agentId);
 				builder.onProgramFile(file.getAbsolutePath());
-				
-				String weightFileName = file.getAbsolutePath().substring(0, file.getAbsolutePath().length()-fileName.length());
-				weightFileName += "weight" + agentId + ".txt";
-				File weightFile = new File(weightFileName);
-				assert weightFile.exists() : "Not valid weight file: " + weightFileName;
-				try {
-					if( weightFileParser == null )
-					{
-						weightFileParser = new WeightFileParser(new FileInputStream(weightFile));
-						weightFileParser.configureDirector(this);
-					}
-					else
-					{
-						WeightFileParser.ReInit(new FileInputStream(weightFile));
-					}
-					WeightFileParser.start();
-				} catch (FileNotFoundException | ParseException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
 				builder.onAgent();
 			}
 		}
+		if( metadataFileName == null )
+			ErrorMessage.errorGeneric("Null input metadata file");
+		
+		parseMetadata(metadataFileName);
 	}
-
+	
+	private void parseMetadata( String metadataFileName ) {
+		try {			
+			SAXParserFactory spf = SAXParserFactory.newInstance();
+		    spf.setNamespaceAware(true);
+		    SAXParser saxParser = spf.newSAXParser();
+		    XMLReader xmlReader = saxParser.getXMLReader();
+		    if( worthComputerBuilder == null )
+		    	ErrorMessage.errorGeneric("WorthBuilder is still null");
+		    xmlReader.setContentHandler(worthComputerBuilder);
+		    xmlReader.parse(metadataFileName);
+		    
+		} catch (ParserConfigurationException e) {
+			e.printStackTrace();
+		} catch (SAXException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	public void configureBuilder( InputBuilder b ) { this.builder = b; }
 	public InputBuilder getBuilder() { return builder; }
 	
+	public void configureWorthBuilder( DefaultHandler wb ) { this.worthComputerBuilder = wb; }
+	public DefaultHandler getWorthBuilder() { return worthComputerBuilder; }
+	
 	private InputBuilder builder;
-	private WeightFileParser weightFileParser;
+	private DefaultHandler worthComputerBuilder;
 }

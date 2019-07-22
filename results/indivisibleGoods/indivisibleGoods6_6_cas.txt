@@ -1,0 +1,67 @@
+ERROR: ld.so: object 'libgtk3-nocsd.so.0' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+[runlim] version:		1.7
+[runlim] time limit:		1800 seconds
+[runlim] real time limit:	311040000 seconds
+[runlim] space limit:		12288 MB
+[runlim] argv[0]:		java
+[runlim] argv[1]:		-Xmx8192m
+[runlim] argv[2]:		-DentityExpansionLimit=1000000
+[runlim] argv[3]:		-cp
+[runlim] argv[4]:		bin:./lib/DLVwrapper-v4.2.jar
+[runlim] argv[5]:		algorithm.NTUFacade
+[runlim] argv[6]:		-reasoning=core
+[runlim] argv[7]:		-stats
+[runlim] argv[8]:		-meta=/home/cesco/Workspace/GraphGenerator/outputIndivisibleGoods6_6/meta.xml
+[runlim] argv[9]:		/home/cesco/Workspace/GraphGenerator/outputIndivisibleGoods6_6/
+[runlim] start:			Sun Feb 17 23:22:44 2019
+[runlim] main pid:		12591
+Imputation answer sets:
+[runlim] sample:		10.1 seconds, 139.2 MB
+[runlim] sample:		20.1 seconds, 246.5 MB
+[runlim] sample:		30.1 seconds, 431.2 MB
+[runlim] sample:		40.1 seconds, 450.6 MB
+[runlim] sample:		50.1 seconds, 814.8 MB
+[runlim] sample:		60.1 seconds, 830.2 MB
+[runlim] sample:		70.1 seconds, 849.8 MB
+[runlim] sample:		80.1 seconds, 867.4 MB
+[runlim] sample:		90.1 seconds, 1447.4 MB
+[runlim] sample:		100.2 seconds, 1581.2 MB
+{ distrib(0) distrib(1) get(a4, 0) get(a2, 0) get(a3, 0) get(a1, 0) get(a5, 0) get(a0, 1) active(a4, g0) active(a4, g5) active(a2, g4) active(a3, g1) active(a3, g3) active(a1, g0) active(a1, g3) active(a5, g2) active(a5, g5) active(a0, g1) active(a0, g4) producer(a4) producer(a2) producer(a3) producer(a1) producer(a5) producer(a0) distributed(0) distributed(1) assembled(1) lowerThan(0, 1) good(g0) good(g1) good(g2) good(g3) good(g4) good(g5) produced(g0, 2) produced(g1, 2) produced(g2, 1) produced(g3, 2) produced(g4, 2) produced(g5, 2) }
+{ distrib(0) distrib(1) get(a4, 0) get(a2, 0) get(a3, 0) get(a1, 0) get(a5, 1) get(a0, 0) active(a4, g0) active(a4, g5) active(a2, g4) active(a3, g1) active(a3, g3) active(a1, g0) active(a1, g3) active(a5, g2) active(a5, g5) active(a0, g1) active(a0, g4) producer(a4) producer(a2) producer(a3) producer(a1) producer(a5) producer(a0) distributed(0) distributed(1) assembled(1) lowerThan(0, 1) good(g0) good(g1) good(g2) good(g3) good(g4) good(g5) produced(g0, 2) produced(g1, 2) produced(g2, 1) produced(g3, 2) produced(g4, 2) produced(g5, 2) }
+{ distrib(0) distrib(1) get(a4, 0) get(a2, 0) get(a3, 0) get(a1, 1) get(a5, 0) get(a0, 0) active(a4, g0) active(a4, g5) active(a2, g4) active(a3, g1) active(a3, g3) active(a1, g0) active(a1, g3) active(a5, g2) active(a5, g5) active(a0, g1) active(a0, g4) producer(a4) producer(a2) producer(a3) producer(a1) producer(a5) producer(a0) distributed(0) distributed(1) assembled(1) lowerThan(0, 1) good(g0) good(g1) good(g2) good(g3) good(g4) good(g5) produced(g0, 2) produced(g1, 2) produced(g2, 1) produced(g3, 2) produced(g4, 2) produced(g5, 2) }
+{ distrib(0) distrib(1) get(a4, 0) get(a2, 0) get(a3, 1) get(a1, 0) get(a5, 0) get(a0, 0) active(a4, g0) active(a4, g5) active(a2, g4) active(a3, g1) active(a3, g3) active(a1, g0) active(a1, g3) active(a5, g2) active(a5, g5) active(a0, g1) active(a0, g4) producer(a4) producer(a2) producer(a3) producer(a1) producer(a5) producer(a0) distributed(0) distributed(1) assembled(1) lowerThan(0, 1) good(g0) good(g1) good(g2) good(g3) good(g4) good(g5) produced(g0, 2) produced(g1, 2) produced(g2, 1) produced(g3, 2) produced(g4, 2) produced(g5, 2) }
+{ distrib(0) distrib(1) get(a4, 0) get(a2, 1) get(a3, 0) get(a1, 0) get(a5, 0) get(a0, 0) active(a4, g0) active(a4, g5) active(a2, g4) active(a3, g1) active(a3, g3) active(a1, g0) active(a1, g3) active(a5, g2) active(a5, g5) active(a0, g1) active(a0, g4) producer(a4) producer(a2) producer(a3) producer(a1) producer(a5) producer(a0) distributed(0) distributed(1) assembled(1) lowerThan(0, 1) good(g0) good(g1) good(g2) good(g3) good(g4) good(g5) produced(g0, 2) produced(g1, 2) produced(g2, 1) produced(g3, 2) produced(g4, 2) produced(g5, 2) }
+{ distrib(0) distrib(1) get(a4, 1) get(a2, 0) get(a3, 0) get(a1, 0) get(a5, 0) get(a0, 0) active(a4, g0) active(a4, g5) active(a2, g4) active(a3, g1) active(a3, g3) active(a1, g0) active(a1, g3) active(a5, g2) active(a5, g5) active(a0, g1) active(a0, g4) producer(a4) producer(a2) producer(a3) producer(a1) producer(a5) producer(a0) distributed(0) distributed(1) assembled(1) lowerThan(0, 1) good(g0) good(g1) good(g2) good(g3) good(g4) good(g5) produced(g0, 2) produced(g1, 2) produced(g2, 1) produced(g3, 2) produced(g4, 2) produced(g5, 2) }
+{ distrib(0) get(a4, 0) get(a2, 0) get(a3, 0) get(a1, 0) get(a5, 0) get(a0, 0) active(a4, g0) active(a4, g5) active(a2, g4) active(a3, g1) active(a3, g3) active(a1, g0) active(a1, g3) active(a5, g2) active(a5, g5) active(a0, g1) active(a0, g4) producer(a4) producer(a2) producer(a3) producer(a1) producer(a5) producer(a0) distributed(0) assembled(1) good(g0) good(g1) good(g2) good(g3) good(g4) good(g5) produced(g0, 2) produced(g1, 2) produced(g2, 1) produced(g3, 2) produced(g4, 2) produced(g5, 2) }
+
+Statistics:
+	IAS in 100083 msec
+
+Core answer sets:
+[runlim] sample:		5.8 seconds, 95.8 MB
+[runlim] sample:		0.8 seconds, 74.5 MB
+[runlim] sample:		10.0 seconds, 119.7 MB
+[runlim] sample:		5.3 seconds, 98.2 MB
+[runlim] sample:		1.4 seconds, 87.5 MB
+[runlim] sample:		11.4 seconds, 123.4 MB
+[runlim] sample:		8.4 seconds, 124.3 MB
+[runlim] sample:		6.2 seconds, 103.2 MB
+{ distrib(0) distrib(1) get(a4, 0) get(a2, 0) get(a3, 0) get(a1, 0) get(a5, 0) get(a0, 1) active(a4, g0) active(a4, g5) active(a2, g4) active(a3, g1) active(a3, g3) active(a1, g0) active(a1, g3) active(a5, g2) active(a5, g5) active(a0, g1) active(a0, g4) producer(a4) producer(a2) producer(a3) producer(a1) producer(a5) producer(a0) distributed(0) distributed(1) assembled(1) lowerThan(0, 1) good(g0) good(g1) good(g2) good(g3) good(g4) good(g5) produced(g0, 2) produced(g1, 2) produced(g2, 1) produced(g3, 2) produced(g4, 2) produced(g5, 2) }
+{ distrib(0) distrib(1) get(a4, 0) get(a2, 0) get(a3, 0) get(a1, 0) get(a5, 1) get(a0, 0) active(a4, g0) active(a4, g5) active(a2, g4) active(a3, g1) active(a3, g3) active(a1, g0) active(a1, g3) active(a5, g2) active(a5, g5) active(a0, g1) active(a0, g4) producer(a4) producer(a2) producer(a3) producer(a1) producer(a5) producer(a0) distributed(0) distributed(1) assembled(1) lowerThan(0, 1) good(g0) good(g1) good(g2) good(g3) good(g4) good(g5) produced(g0, 2) produced(g1, 2) produced(g2, 1) produced(g3, 2) produced(g4, 2) produced(g5, 2) }
+{ distrib(0) distrib(1) get(a4, 0) get(a2, 0) get(a3, 0) get(a1, 1) get(a5, 0) get(a0, 0) active(a4, g0) active(a4, g5) active(a2, g4) active(a3, g1) active(a3, g3) active(a1, g0) active(a1, g3) active(a5, g2) active(a5, g5) active(a0, g1) active(a0, g4) producer(a4) producer(a2) producer(a3) producer(a1) producer(a5) producer(a0) distributed(0) distributed(1) assembled(1) lowerThan(0, 1) good(g0) good(g1) good(g2) good(g3) good(g4) good(g5) produced(g0, 2) produced(g1, 2) produced(g2, 1) produced(g3, 2) produced(g4, 2) produced(g5, 2) }
+{ distrib(0) distrib(1) get(a4, 0) get(a2, 0) get(a3, 1) get(a1, 0) get(a5, 0) get(a0, 0) active(a4, g0) active(a4, g5) active(a2, g4) active(a3, g1) active(a3, g3) active(a1, g0) active(a1, g3) active(a5, g2) active(a5, g5) active(a0, g1) active(a0, g4) producer(a4) producer(a2) producer(a3) producer(a1) producer(a5) producer(a0) distributed(0) distributed(1) assembled(1) lowerThan(0, 1) good(g0) good(g1) good(g2) good(g3) good(g4) good(g5) produced(g0, 2) produced(g1, 2) produced(g2, 1) produced(g3, 2) produced(g4, 2) produced(g5, 2) }
+{ distrib(0) distrib(1) get(a4, 0) get(a2, 1) get(a3, 0) get(a1, 0) get(a5, 0) get(a0, 0) active(a4, g0) active(a4, g5) active(a2, g4) active(a3, g1) active(a3, g3) active(a1, g0) active(a1, g3) active(a5, g2) active(a5, g5) active(a0, g1) active(a0, g4) producer(a4) producer(a2) producer(a3) producer(a1) producer(a5) producer(a0) distributed(0) distributed(1) assembled(1) lowerThan(0, 1) good(g0) good(g1) good(g2) good(g3) good(g4) good(g5) produced(g0, 2) produced(g1, 2) produced(g2, 1) produced(g3, 2) produced(g4, 2) produced(g5, 2) }
+{ distrib(0) distrib(1) get(a4, 1) get(a2, 0) get(a3, 0) get(a1, 0) get(a5, 0) get(a0, 0) active(a4, g0) active(a4, g5) active(a2, g4) active(a3, g1) active(a3, g3) active(a1, g0) active(a1, g3) active(a5, g2) active(a5, g5) active(a0, g1) active(a0, g4) producer(a4) producer(a2) producer(a3) producer(a1) producer(a5) producer(a0) distributed(0) distributed(1) assembled(1) lowerThan(0, 1) good(g0) good(g1) good(g2) good(g3) good(g4) good(g5) produced(g0, 2) produced(g1, 2) produced(g2, 1) produced(g3, 2) produced(g4, 2) produced(g5, 2) }
+{ distrib(0) get(a4, 0) get(a2, 0) get(a3, 0) get(a1, 0) get(a5, 0) get(a0, 0) active(a4, g0) active(a4, g5) active(a2, g4) active(a3, g1) active(a3, g3) active(a1, g0) active(a1, g3) active(a5, g2) active(a5, g5) active(a0, g1) active(a0, g4) producer(a4) producer(a2) producer(a3) producer(a1) producer(a5) producer(a0) distributed(0) assembled(1) good(g0) good(g1) good(g2) good(g3) good(g4) good(g5) produced(g0, 2) produced(g1, 2) produced(g2, 1) produced(g3, 2) produced(g4, 2) produced(g5, 2) }
+
+Statistics:
+	IAS in 100083 msec
+	CAS in 186722 msec
+[runlim] end:			Sun Feb 17 23:25:51 2019
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1864
+[runlim] real:			187.55 seconds
+[runlim] time:			100.25 seconds
+[runlim] space:			1844.3 MB
+[runlim] samples:		1868

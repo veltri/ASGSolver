@@ -1,0 +1,21 @@
+t1 v nt1.
+nt1 :- not s1.
+nt1 :- not s3.
+nt1 :- not s4.
+t2 v nt2.
+nt2 :- not s2.
+nt2 :- not s5.
+nt2 :- not s6.
+nt2 :- not s7.
+t3 v nt3.
+nt3 :- not s4.
+nt3 :- not s6.
+t4 v nt4.
+nt4 :- not s5.
+nt4 :- not s7.
+nt4 :- not s8.
+
+s6 :- a3.
+s7 :- a3.
+s8 :- a3.
+a3.

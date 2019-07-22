@@ -2,54 +2,48 @@ package data;
 
 public class Agent {
 	
-	private int id;
+	private String id;
 	private String programFile;
-	private WeightTable weightTable;
-	private int maxWeightSingleton;
-	private int maxWeightGrandCoalition;
+	private double maxWeightSingleton;
+	private double maxWeightGrandCoalition;
 	
-	public Agent( int ident, String fileName, WeightTable wt, int maxWSC, int maxWGC ) {
-		init(ident,fileName,wt,maxWSC,maxWGC);
+	public Agent( String ident, String fileName, int maxWSC, int maxWGC ) {
+		init(ident,fileName,maxWSC,maxWGC);
 	}
 	
-	public Agent( int ident, String fileName, WeightTable wt ) {
-		init(ident,fileName,wt,Integer.MIN_VALUE, Integer.MIN_VALUE);
+	public Agent( String ident, String fileName ) {
+		init(ident,fileName,Integer.MIN_VALUE, Integer.MIN_VALUE);
 	}
 
-	private void init( int ident, String fileName, WeightTable wt, int maxWSC, int maxWGC ) {
+	private void init( String ident, String fileName, double maxWSC, double maxWGC ) {
 		this.id = ident;
 		this.programFile = fileName;
-		this.weightTable = wt;
 		this.maxWeightSingleton = maxWSC;
 		this.maxWeightGrandCoalition = maxWGC;
 	}
 	
-	public int getMaxWeightGrandCoalition() {
+	public double getMaxWeightGrandCoalition() {
 		return maxWeightGrandCoalition;
 	}
 
-	public void setMaxWeightGrandCoalition(int maxWeightGrandCoalition) {
+	public void setMaxWeightGrandCoalition(double maxWeightGrandCoalition) {
 		this.maxWeightGrandCoalition = maxWeightGrandCoalition;
 	}
 	
-	public int getMaxWeightSingleton() {
+	public double getMaxWeightSingleton() {
 		return maxWeightSingleton;
 	}
 	
-	public void setMaxWeightSingleton( int m ){
+	public void setMaxWeightSingleton(double m ){
 		maxWeightSingleton = m;
 	}
 	
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
 	public String getProgramFile() {
 		return programFile;
-	}
-
-	public WeightTable getWeightTable() {
-		return weightTable;
 	}
 
 	@Override
@@ -61,9 +55,12 @@ public class Agent {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + id;
-		result = prime * result + maxWeightGrandCoalition;
-		result = prime * result + maxWeightSingleton;
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		long temp;
+		temp = Double.doubleToLongBits(maxWeightGrandCoalition);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		temp = Double.doubleToLongBits(maxWeightSingleton);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
 		result = prime * result
 				+ ((programFile == null) ? 0 : programFile.hashCode());
 		return result;
@@ -78,11 +75,16 @@ public class Agent {
 		if (getClass() != obj.getClass())
 			return false;
 		Agent other = (Agent) obj;
-		if (id != other.id)
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
 			return false;
-		if (maxWeightGrandCoalition != other.maxWeightGrandCoalition)
+		if (Double.doubleToLongBits(maxWeightGrandCoalition) != Double
+				.doubleToLongBits(other.maxWeightGrandCoalition))
 			return false;
-		if (maxWeightSingleton != other.maxWeightSingleton)
+		if (Double.doubleToLongBits(maxWeightSingleton) != Double
+				.doubleToLongBits(other.maxWeightSingleton))
 			return false;
 		if (programFile == null) {
 			if (other.programFile != null)
@@ -91,7 +93,5 @@ public class Agent {
 			return false;
 		return true;
 	}
-
-
 
 }

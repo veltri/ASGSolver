@@ -1,0 +1,56 @@
+<root>
+    <agent id="a1">
+        <avail>s1</avail>
+        <avail>s2</avail>
+        <avail>s3</avail>
+        <earns taskId="t1" value="2"/>
+        <earns taskId="t2" value="2"/>
+        <earns taskId="t3" value="2"/>
+        <earns taskId="t4" value="2"/>
+    </agent>
+    <agent id="a2">
+        <avail>s4</avail>
+        <avail>s5</avail>
+        <earns taskId="t1" value="2"/>
+        <earns taskId="t2" value="2"/>
+        <earns taskId="t3" value="2"/>
+        <earns taskId="t4" value="2"/>
+    </agent>
+    <agent id="a3">
+        <avail>s6</avail>
+        <avail>s7</avail>
+        <avail>s8</avail>
+        <earns taskId="t1" value="2"/>
+        <earns taskId="t2" value="2"/>
+        <earns taskId="t3" value="2"/>
+        <earns taskId="t4" value="2"/>
+    </agent>
+    <task id="t1">
+        <requires>s1</requires>
+        <requires>s3</requires>
+        <requires>s4</requires>        
+    </task>
+    <task id="t2">
+        <requires>s2</requires>
+        <requires>s5</requires>
+        <requires>s6</requires>
+        <requires>s7</requires>
+    </task>
+    <task id="t3">
+        <requires>s4</requires>
+        <requires>s6</requires>
+    </task>
+    <task id="t4">
+        <requires>s5</requires>
+        <requires>s7</requires>
+        <requires>s8</requires>
+    </task>
+    <skill id="s1" sigma="1"/>
+    <skill id="s2" sigma="1"/>
+    <skill id="s3" sigma="1"/>
+    <skill id="s4" sigma="1"/>
+    <skill id="s5" sigma="1"/>
+    <skill id="s6" sigma="1"/>
+    <skill id="s7" sigma="1"/>
+    <skill id="s8" sigma="1"/>
+</root>

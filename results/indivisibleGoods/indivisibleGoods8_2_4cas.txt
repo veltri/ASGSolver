@@ -1,0 +1,80 @@
+ERROR: ld.so: object 'libgtk3-nocsd.so.0' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+[runlim] version:		1.7
+[runlim] time limit:		1800 seconds
+[runlim] real time limit:	311040000 seconds
+[runlim] space limit:		12288 MB
+[runlim] argv[0]:		java
+[runlim] argv[1]:		-Xmx8192m
+[runlim] argv[2]:		-DentityExpansionLimit=1000000
+[runlim] argv[3]:		-cp
+[runlim] argv[4]:		bin:./lib/DLVwrapper-v4.2.jar
+[runlim] argv[5]:		algorithm.NTUFacade
+[runlim] argv[6]:		-reasoning=4core
+[runlim] argv[7]:		-stats
+[runlim] argv[8]:		-meta=/home/cesco/Workspace/GraphGenerator/outputIndivisibleGoods8_2/meta.xml
+[runlim] argv[9]:		/home/cesco/Workspace/GraphGenerator/outputIndivisibleGoods8_2/
+[runlim] start:			Sun Feb 17 22:21:07 2019
+[runlim] main pid:		10874
+Imputation answer sets:
+[runlim] sample:		7.5 seconds, 231.6 MB
+[runlim] sample:		17.6 seconds, 432.2 MB
+[runlim] sample:		27.6 seconds, 791.6 MB
+[runlim] sample:		37.6 seconds, 822.5 MB
+[runlim] sample:		47.6 seconds, 1555.0 MB
+[runlim] sample:		57.6 seconds, 1585.7 MB
+[runlim] sample:		67.6 seconds, 1616.3 MB
+[runlim] sample:		77.6 seconds, 1647.0 MB
+[runlim] sample:		87.6 seconds, 1678.0 MB
+[runlim] sample:		97.6 seconds, 1715.1 MB
+[runlim] sample:		99.9 seconds, 2741.2 MB
+[runlim] sample:		102.3 seconds, 3109.5 MB
+[runlim] sample:		113.4 seconds, 3143.8 MB
+[runlim] sample:		123.4 seconds, 3175.0 MB
+[runlim] sample:		133.4 seconds, 3206.7 MB
+[runlim] sample:		143.4 seconds, 3238.4 MB
+[runlim] sample:		153.4 seconds, 3270.2 MB
+[runlim] sample:		163.4 seconds, 3301.6 MB
+[runlim] sample:		173.4 seconds, 3333.3 MB
+[runlim] sample:		183.4 seconds, 3365.0 MB
+[runlim] sample:		193.4 seconds, 3396.7 MB
+[runlim] sample:		203.4 seconds, 3439.6 MB
+[runlim] sample:		213.4 seconds, 6253.4 MB
+[runlim] sample:		223.4 seconds, 6273.7 MB
+[runlim] sample:		233.4 seconds, 6294.1 MB
+[runlim] sample:		243.4 seconds, 6314.5 MB
+[runlim] sample:		253.4 seconds, 6335.1 MB
+[runlim] sample:		263.4 seconds, 6355.5 MB
+[runlim] sample:		273.4 seconds, 6375.8 MB
+[runlim] sample:		283.4 seconds, 6396.2 MB
+[runlim] sample:		293.4 seconds, 6416.6 MB
+[runlim] sample:		303.4 seconds, 6437.2 MB
+[runlim] sample:		313.4 seconds, 6457.6 MB
+[runlim] sample:		323.4 seconds, 6477.9 MB
+[runlim] sample:		333.4 seconds, 6498.3 MB
+[runlim] sample:		343.4 seconds, 6518.7 MB
+[runlim] sample:		353.4 seconds, 6539.0 MB
+[runlim] sample:		363.4 seconds, 6559.7 MB
+[runlim] sample:		373.4 seconds, 6580.0 MB
+[runlim] sample:		383.4 seconds, 6600.4 MB
+[runlim] sample:		393.4 seconds, 6620.8 MB
+[runlim] sample:		403.4 seconds, 6641.1 MB
+[runlim] sample:		413.4 seconds, 6661.5 MB
+[runlim] sample:		423.4 seconds, 6682.1 MB
+[runlim] sample:		433.4 seconds, 6702.5 MB
+[runlim] sample:		443.4 seconds, 6722.9 MB
+[runlim] sample:		453.4 seconds, 6743.2 MB
+[runlim] sample:		463.4 seconds, 6763.6 MB
+[runlim] sample:		473.5 seconds, 6784.0 MB
+[runlim] sample:		483.5 seconds, 6804.6 MB
+[runlim] sample:		493.4 seconds, 6824.9 MB
+[runlim] sample:		503.5 seconds, 6845.3 MB
+[runlim] sample:		513.5 seconds, 6865.9 MB
+[runlim] sample:		523.5 seconds, 10828.8 MB
+[runlim] end:			Sun Feb 17 22:30:21 2019
+[runlim] status:		out of memory
+[runlim] result:		1
+[runlim] children:		5384
+[runlim] real:			554.06 seconds
+[runlim] time:			524.46 seconds
+[runlim] space:			12355.0 MB
+[runlim] samples:		5410
